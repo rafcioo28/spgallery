@@ -9,7 +9,7 @@ jQuery(document).ready(($) => {
     mediaUploader = wp.media({
       title: 'Wybierz zdjęcia',
       button: {
-      text: 'Wybór wieli z wciśniętym klawiszem CTRL'
+      text: 'Zatwierdź wybór'
     }, multiple: true });
     mediaUploader.on('select', () => {
       var innerHTML = '';
@@ -24,8 +24,6 @@ jQuery(document).ready(($) => {
       $("#spgallery_media_ids").val(mediaIDs.join());
       $("#sgallery-thumb").html(innerHTML);
       
-      //console.log(JSON.stringify(attachment, null, 4));
-      //$('#spgallery_media').val(attachment.url);
     });
     mediaUploader.open();
   });
